@@ -12,4 +12,7 @@
     <string name="cofmot">Confirmer mot de passe</string>
     <string name="inscrir">Inscrir</string>
     <string name="autreInsc">Ou s inscrir avec</string>
+    <string name="formateur">Formateur</string>
+    <string name="etudiant">Etudiant</string>
+    <string name="choixUser">Vous étez: </string>
 </resources>
