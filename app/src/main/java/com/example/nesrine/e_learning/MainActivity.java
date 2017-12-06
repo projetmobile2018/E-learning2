@@ -1,6 +1,8 @@
 package com.example.nesrine.e_learning;
 
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +16,9 @@ public class MainActivity extends AppCompatActivity {
     Button login, sign, forget, connect;
     ImageButton eye;
     EditText pseudo, password;
+    String ps, mp;
     TextView textView;
+    Context ctx;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,4 +59,47 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+    //Methode connecter
+    public  void connecter(View view )
+    {
+        ps = pseudo.getText().toString();
+        mp = password.getText().toString();
+        if(ps.equals("")|| mp.equals(""))
+        {
+            Toast toast = Toast.makeText(getApplicationContext(), "Tous les champs sont obligatoire !!!", Toast.LENGTH_LONG);
+            toast.show();
+        }
+        else
+        {
+           /* DatabaseOperations dop = new DatabaseOperations(ctx);
+            Cursor CR = dop.getForm(dop);
+            CR.moveToFirst();
+            boolean login =false;
+            String NAME="";
+            do {
+                if(ps.equals(CR.getString(0))&&mp.equals(CR.getString(1)))
+                {
+                    login = true;
+                    NAME =CR.getString(0);
+                }
+            }while(CR.moveToNext());
+            if(login)
+            {
+                Toast toast = Toast.makeText(getApplicationContext(), "Login Success ------\n welcome "+NAME, Toast.LENGTH_LONG);
+                toast.show();
+
+            }
+            else{
+                Toast toast = Toast.makeText(getApplicationContext(), "pseudo et/ou mot de passe incorrecte ", Toast.LENGTH_LONG);
+                toast.show();
+            }*/
+           Intent intent = new Intent(this,FormateurMenu.class);
+            startActivity(intent);
+        }
+    }
+    public  String getPs()
+    {
+        return ps;
+    }
+
 }

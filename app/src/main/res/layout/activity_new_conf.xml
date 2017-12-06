@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.nesrine.e_learning.NewConf">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/lecture"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="74dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="@string/titre"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/imageView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/t3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/DateConf"
+        android:inputType="date"
+        android:layout_below="@+id/t2"
+        android:layout_alignLeft="@+id/t2"
+        android:layout_alignStart="@+id/t2" />
+
+    <EditText
+        android:id="@+id/t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/t1"
+        android:layout_alignStart="@+id/t1"
+        android:layout_below="@+id/t1"
+        android:ems="10"
+        android:hint="@string/adres"
+        android:inputType="textPostalAddress" />
+
+    <EditText
+        android:id="@+id/t4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/t3"
+        android:layout_alignStart="@+id/t3"
+        android:layout_below="@+id/t3"
+        android:ems="10"
+        android:hint="@string/heureDeb"
+        android:inputType="time" />
+
+    <EditText
+        android:id="@+id/t5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/t4"
+        android:layout_alignStart="@+id/t4"
+        android:layout_below="@+id/t4"
+        android:ems="10"
+        android:hint="@string/heureFin"
+        android:inputType="time" />
+
+    <EditText
+        android:id="@+id/t6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/t5"
+        android:layout_alignStart="@+id/t5"
+        android:layout_below="@+id/t5"
+        android:ems="10"
+        android:hint="@string/Descp"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/b"
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/t6"
+        android:layout_alignLeft="@+id/t6"
+        android:layout_alignRight="@+id/t6"
+        android:layout_alignStart="@+id/t6"
+        android:layout_below="@+id/t6"
+        android:onClick="addConfer"
+        android:text="@string/add" />
+
+</RelativeLayout>

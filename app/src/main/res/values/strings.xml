@@ -15,4 +15,15 @@
     <string name="formateur">Formateur</string>
     <string name="etudiant">Etudiant</string>
     <string name="choixUser">Vous étez: </string>
+    <string name="mesconf">Mes Conférences</string>
+    <string name="addConf">Ajouter une Conférences</string>
+    <string name="autreCon">Autre Conférences</string>
+    <string name="serach">Search</string>
+    <string name="titre">Titre de Conférence*</string>
+    <string name="DateConf">Date de Conférence*</string>
+    <string name="heureDeb">Heure début*</string>
+    <string name="heureFin">Heure Fin*</string>
+    <string name="Descp">Déscription*</string>
+    <string name="adres">Adresse*</string>
+    <string name="add">Ajouter</string>
 </resources>
