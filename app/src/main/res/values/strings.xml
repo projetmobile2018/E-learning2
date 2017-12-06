@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">E-learning</string>
+    <string name="sign_up" translatable="false">Sign up</string>
+    <string name="login">Login</string>
+    <string name="pseudo">Pseudo</string>
+    <string name="password">Mot de passe</string>
+    <string name="Connecter">Connecter</string>
+    <string name="forgetPass">oublié mot de passe?</string>
+    <string name="nom">Nom</string>
+    <string name="Prenom">Prénom</string>
+    <string name="email">Email</string>
+    <string name="cofmot">Confirmer mot de passe</string>
+    <string name="inscrir">Inscrir</string>
+    <string name="autreInsc">Ou s inscrir avec</string>
+</resources>

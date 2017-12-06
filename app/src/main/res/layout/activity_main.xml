@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.nesrine.e_learning.MainActivity">
+
+    <Button
+        android:id="@+id/loginB"
+        style="@style/AppTheme"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/holo_green_light"
+        android:onClick="gotosame"
+        android:text="@string/login"
+        android:textColor="@android:color/black"
+        tools:layout_editor_absoluteX="193dp"
+        tools:layout_editor_absoluteY="29dp" />
+
+    <Button
+        android:id="@+id/signupB"
+        style="@style/AppTheme"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/loginB"
+        android:layout_alignBottom="@+id/loginB"
+        android:layout_toLeftOf="@+id/loginB"
+        android:layout_toStartOf="@+id/loginB"
+        android:background="@android:color/darker_gray"
+        android:onClick="gotosign"
+        android:text="@string/sign_up"
+        android:textColor="@android:color/black" />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/brain"
+        android:layout_below="@+id/loginB"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp" />
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="@string/pseudo"
+        android:inputType="textPersonName"
+        android:drawableLeft="@drawable/ic_action_name"/>
+
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/ic_action_name_lock"/>
+
+    <Button
+        android:id="@+id/cx"
+        style="@style/AppTheme"
+        android:layout_width="175dp"
+        android:layout_height="48dp"
+        android:layout_alignEnd="@+id/edit2"
+        android:layout_alignLeft="@+id/edit2"
+        android:layout_alignRight="@+id/edit2"
+        android:layout_alignStart="@+id/edit2"
+        android:layout_below="@+id/edit2"
+        android:layout_marginTop="26dp"
+        android:background="@android:color/darker_gray"
+        android:text="@string/Connecter"
+        android:textColor="@android:color/black" />
+
+    <ImageButton
+        android:id="@+id/eyeB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/edit2"
+        android:layout_toEndOf="@+id/edit2"
+        android:layout_toRightOf="@+id/edit2"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/ic_action_name_eye" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edit1"
+        android:text="TextView"
+        android:visibility="invisible"
+        android:layout_alignRight="@+id/edit1"
+        android:layout_alignEnd="@+id/edit1"
+        android:layout_alignLeft="@+id/edit1"
+        android:layout_alignStart="@+id/edit1" />
+
+    <Button
+        android:id="@+id/forgetB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/eyeB"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/eyeB"
+        android:background="@android:color/transparent"
+        android:text="@string/forgetPass"
+        android:layout_alignLeft="@+id/imageView3"
+        android:layout_alignStart="@+id/imageView3" />
+
+</RelativeLayout>
