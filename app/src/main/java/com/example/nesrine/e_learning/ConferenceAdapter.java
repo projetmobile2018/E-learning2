@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * Created by Nesrine on 10/12/2017.
  */
-//fghk
+
 public class ConferenceAdapter extends ArrayAdapter {
     List list = new ArrayList();
     public ConferenceAdapter(@NonNull Context context, @LayoutRes int resource) {
