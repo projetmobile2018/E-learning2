@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
             toast = Toast.makeText(getApplicationContext(), "S'il vous plaît attendre...", Toast.LENGTH_LONG);
             toast.show();
             Intent intent = new Intent(this,FormateurMenu.class);
+            intent.putExtra("ps",ps);
             startActivity(intent);
            /*
            //rechercher formateur

@@ -20,10 +20,13 @@ public class NewConf extends AppCompatActivity {
     String titre, ad, dConf, hD, hF, desp, form;
     int duration = Toast.LENGTH_LONG;
     SQLiteDatabase SQ;
+    String ps;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_conf);
+        Intent intent = getIntent();
+        ps = intent.getStringExtra("ps");
         titr = (EditText)findViewById(R.id.t1);
         adresse = (EditText)findViewById(R.id.t2);
         dateConf = (EditText)findViewById(R.id.t3);
@@ -34,8 +37,7 @@ public class NewConf extends AppCompatActivity {
     }
     public void addConfer(View view)
     {
-        MainActivity mainActivity = new MainActivity();
-       form= mainActivity.getPs();
+       form= ps;
         titre= titr.getText().toString();
         ad = adresse.getText().toString();
         dConf = dateConf.getText().toString();
@@ -100,6 +102,7 @@ public class NewConf extends AppCompatActivity {
                                     toast.show();
 
                                     Intent intent = new Intent(this, MyConferences.class);
+                                    intent.putExtra("ps",ps);
                                     startActivity(intent);
                                 } catch (ParseException e) {
                                     Toast toast = Toast.makeText(getApplicationContext(), "S'il vous plait vérifier vos la date et/ou l' heure !!! ", duration);

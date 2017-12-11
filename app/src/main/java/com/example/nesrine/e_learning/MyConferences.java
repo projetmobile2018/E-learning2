@@ -1,5 +1,6 @@
 package com.example.nesrine.e_learning;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -20,6 +21,8 @@ DatabaseOperations dop = new DatabaseOperations(this);
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_conferences);
+        Intent intent = getIntent();
+        ps = intent.getStringExtra("ps");
         list= (ListView)findViewById(R.id.list);
         listDataAdapter = new ConferenceAdapter(getApplicationContext(),R.layout.display_conference);
         list.setAdapter(listDataAdapter);
