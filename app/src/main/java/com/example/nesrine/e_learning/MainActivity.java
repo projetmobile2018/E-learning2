@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
     EditText pseudo, password;
     String ps, mp;
     TextView textView;
-    Context ctx;
+    Context ctx= this;
+    Toast toast;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,35 +67,45 @@ public class MainActivity extends AppCompatActivity {
         mp = password.getText().toString();
         if(ps.equals("")|| mp.equals(""))
         {
-            Toast toast = Toast.makeText(getApplicationContext(), "Tous les champs sont obligatoire !!!", Toast.LENGTH_LONG);
+             toast = Toast.makeText(getApplicationContext(), "Tous les champs sont obligatoire !!!", Toast.LENGTH_LONG);
             toast.show();
         }
         else
         {
-           /* DatabaseOperations dop = new DatabaseOperations(ctx);
+            toast = Toast.makeText(getApplicationContext(), "S'il vous plaît attendre...", Toast.LENGTH_LONG);
+            toast.show();
+            Intent intent = new Intent(this,FormateurMenu.class);
+            startActivity(intent);
+           /*
+           //rechercher formateur
+
+            DatabaseOperations dop = new DatabaseOperations(ctx);
             Cursor CR = dop.getForm(dop);
             CR.moveToFirst();
-            boolean login =false;
+            boolean loginSatut =false;
             String NAME="";
             do {
-                if(ps.equals(CR.getString(0))&&mp.equals(CR.getString(1)))
+                toast = Toast.makeText(getApplicationContext(), "Login Success ------\n welcome " + CR.getString(0), Toast.LENGTH_LONG);
+                toast.show();
+              /*  if(ps.equals(CR.getString(0)))
                 {
-                    login = true;
+                    loginSatut = true;
                     NAME =CR.getString(0);
                 }
             }while(CR.moveToNext());
-            if(login)
-            {
-                Toast toast = Toast.makeText(getApplicationContext(), "Login Success ------\n welcome "+NAME, Toast.LENGTH_LONG);
+            if(loginSatut) {
+                toast = Toast.makeText(getApplicationContext(), "Login Success ------\n welcome " + NAME, Toast.LENGTH_LONG);
                 toast.show();
-
+                Intent intent = new Intent(this,FormateurMenu.class);
+                 startActivity(intent);
             }
-            else{
-                Toast toast = Toast.makeText(getApplicationContext(), "pseudo et/ou mot de passe incorrecte ", Toast.LENGTH_LONG);
+            else
+            {
+                toast = Toast.makeText(getApplicationContext(), "Pseudo rt/ou mot de passe incorrectes\n S'il S'il vous plaît vérifier vos données!!! " + NAME, Toast.LENGTH_LONG);
                 toast.show();
+                Intent intent = new Intent(this,FormateurMenu.class);
+                startActivity(intent);
             }*/
-           Intent intent = new Intent(this,FormateurMenu.class);
-            startActivity(intent);
         }
     }
     public  String getPs()

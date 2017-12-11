@@ -26,4 +26,12 @@
     <string name="Descp">Déscription*</string>
     <string name="adres">Adresse*</string>
     <string name="add">Ajouter</string>
+    <string name="formatdate">(jj-mm-aaaa)</string>
+    <string name="formatheur">(hh:mm)</string>
+    <string name="apartirde">A partir de</string>
+    <string name="jusqua">A</string>
+    <string name="Titre">Titre</string>
+    <string name="descrip">Déscription</string>
+    <string name="adresse">Adresse</string>
+    <string name="Date">Date</string>
 </resources>

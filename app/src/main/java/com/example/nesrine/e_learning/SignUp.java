@@ -2,6 +2,7 @@ package com.example.nesrine.e_learning;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,7 +21,7 @@ public class SignUp extends AppCompatActivity {
     int duration = Toast.LENGTH_SHORT;
     String  name, lastn, pse, mot,motc, ema,user;
     Context ctx = this;
-
+    SQLiteDatabase SQ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +54,6 @@ public class SignUp extends AppCompatActivity {
     {
         //recupérer les données
         name = nom.getText().toString();
-        Log.d("name ",name);
         lastn = prenom.getText().toString();
         pse = pseudo.getText().toString();
         mot = motpass.getText().toString();
@@ -129,9 +129,11 @@ public class SignUp extends AppCompatActivity {
                                         }
                                                 // insert
                                         DatabaseOperations databaseOperations = new DatabaseOperations(this);
-                                        databaseOperations.putInformation(databaseOperations,name,lastn,pse,ema,mot,user);
-                                        Toast toast = Toast.makeText(getApplicationContext(), "Inscription faite avec succées", duration);
+                                        SQ = databaseOperations.getWritableDatabase();
+                                        databaseOperations.putInformation(SQ,name,lastn,pse,ema,mot,user);
+                                        Toast toast = Toast.makeText(getApplicationContext(), "Inscription faite avec succées "+user, duration);
                                         toast.show();
+                                       databaseOperations.close();
                                     }
                                 }
                             }

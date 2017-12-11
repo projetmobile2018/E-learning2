@@ -52,7 +52,7 @@
 
     <EditText
         android:id="@+id/t4"
-        android:layout_width="wrap_content"
+        android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/t3"
         android:layout_alignStart="@+id/t3"
@@ -63,37 +63,125 @@
 
     <EditText
         android:id="@+id/t5"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/t4"
-        android:layout_alignStart="@+id/t4"
-        android:layout_below="@+id/t4"
         android:ems="10"
         android:hint="@string/heureFin"
-        android:inputType="time" />
+        android:inputType="time"
+        android:layout_below="@+id/t3"
+        android:layout_toLeftOf="@+id/textView5"
+        android:layout_toStartOf="@+id/textView5"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp" />
 
     <EditText
         android:id="@+id/t6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/t5"
-        android:layout_alignStart="@+id/t5"
-        android:layout_below="@+id/t5"
         android:ems="10"
         android:hint="@string/Descp"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/t4"
+        android:layout_alignLeft="@+id/t4"
+        android:layout_alignStart="@+id/t4"
+        android:layout_above="@+id/b" />
 
     <Button
         android:id="@+id/b"
         style="@style/AppTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/t6"
-        android:layout_alignLeft="@+id/t6"
-        android:layout_alignRight="@+id/t6"
-        android:layout_alignStart="@+id/t6"
-        android:layout_below="@+id/t6"
         android:onClick="addConfer"
-        android:text="@string/add" />
+        android:text="@string/add"
+        android:layout_marginBottom="19dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/t5"
+        android:layout_alignEnd="@+id/t5"
+        android:layout_alignLeft="@+id/t6"
+        android:layout_alignStart="@+id/t6" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/t4"
+        android:layout_toEndOf="@+id/t3"
+        android:layout_toRightOf="@+id/t3"
+        android:text="@string/formatdate" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/formatheur"
+        android:layout_alignBaseline="@+id/t5"
+        android:layout_alignBottom="@+id/t5"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:text="@string/Titre"
+        tools:autoSizeMaxTextSize="20dp"
+        android:layout_alignBaseline="@+id/t1"
+        android:layout_alignBottom="@+id/t1"
+        android:layout_toLeftOf="@+id/t2"
+        android:layout_toStartOf="@+id/t2" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/adresse"
+        android:layout_alignBaseline="@+id/t2"
+        android:layout_alignBottom="@+id/t2"
+        android:layout_toLeftOf="@+id/t2"
+        android:layout_toStartOf="@+id/t2"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/apartirde"
+        android:layout_alignBaseline="@+id/t4"
+        android:layout_alignBottom="@+id/t4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView3"
+        android:layout_alignEnd="@+id/textView9"
+        android:layout_alignRight="@+id/textView9"
+        android:text="@string/Date" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/jusqua"
+        android:layout_alignBaseline="@+id/t5"
+        android:layout_alignBottom="@+id/t5"
+        android:layout_toLeftOf="@+id/t5"
+        android:layout_toStartOf="@+id/t5" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/descrip"
+        android:layout_alignBaseline="@+id/t6"
+        android:layout_alignBottom="@+id/t6"
+        android:layout_toLeftOf="@+id/t6"
+        android:layout_toStartOf="@+id/t6" />
 
 </RelativeLayout>
