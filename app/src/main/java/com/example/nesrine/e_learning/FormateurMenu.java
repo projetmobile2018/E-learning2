@@ -15,7 +15,7 @@ public class FormateurMenu extends AppCompatActivity {
         setContentView(R.layout.activity_formateur_menu);
         Intent intent = getIntent();
         ps = intent.getStringExtra("ps");
-        myConf = (Button)findViewById(R.id.b1);
+        myConf = (Button)findViewById(R.id.be1);
         addConf =(Button)findViewById(R.id.b2);
         otherConf =(Button)findViewById(R.id.b3);
     }
