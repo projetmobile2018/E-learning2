@@ -94,12 +94,11 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/imageView5"
-        android:layout_alignRight="@+id/imageView5"
-        android:layout_below="@+id/imageView5"
         android:layout_marginTop="19dp"
         android:text="@string/mesconf"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_below="@+id/imageView5"
+        android:layout_centerHorizontal="true" />
 
     <ListView
         android:id="@+id/list"
