@@ -29,7 +29,7 @@
         <activity android:name=".NewConf" />
         <activity android:name=".MyConferences" />
         <activity android:name=".OtherConferences" />
-        <activity android:name=".ConferenceActivity"></activity>
+        <activity android:name=".Apprenant"></activity>
     </application>
 
 </manifest>
