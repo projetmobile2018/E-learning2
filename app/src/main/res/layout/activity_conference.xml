@@ -1,9 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.nesrine.e_learning.ConferenceActivity">
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/lecture"
+        android:layout_centerHorizontal="true" />
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/t1"
+        style="@style/AppTheme"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView4"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/textView9"
+        android:ems="10"
+        android:hint="@string/titre"
+        android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Notification" />
+
+    <EditText
+        android:id="@+id/t3"
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/t2"
+        android:layout_alignStart="@+id/t2"
+        android:layout_below="@+id/t2"
+        android:ems="10"
+        android:hint="@string/DateConf"
+        android:inputType="date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Notification" />
+
+    <EditText
+        android:id="@+id/t2"
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/t1"
+        android:layout_alignStart="@+id/t1"
+        android:layout_below="@+id/t1"
+        android:ems="10"
+        android:hint="@string/adres"
+        android:inputType="textPostalAddress"
+        android:textAppearance="@style/TextAppearance.AppCompat.Notification"
+        android:layout_alignRight="@+id/t1"
+        android:layout_alignEnd="@+id/t1" />
+
+    <EditText
+        android:id="@+id/t4"
+        style="@style/AppTheme"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/t5"
+        android:layout_alignBottom="@+id/t5"
+        android:layout_toEndOf="@+id/textView9"
+        android:layout_toRightOf="@+id/textView9"
+        android:ems="10"
+        android:hint="@string/heureDeb"
+        android:inputType="time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Notification" />
+
+    <EditText
+        android:id="@+id/t5"
+        style="@style/AppTheme"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/heureFin"
+        android:inputType="time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Notification"
+        android:layout_below="@+id/t3"
+        android:layout_toLeftOf="@+id/textView5"
+        android:layout_toStartOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/t6"
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Descp"
+        android:inputType="textMultiLine"
+        android:textAppearance="@style/TextAppearance.AppCompat.Notification"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/t4"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_toRightOf="@+id/textView11"
+        android:layout_toEndOf="@+id/textView11" />
+
+    <Button
+        android:id="@+id/updateB"
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView10"
+        android:layout_alignStart="@+id/textView10"
+        android:layout_below="@+id/t6"
+        android:layout_marginTop="32dp"
+        android:elevation="0dp"
+        android:onClick="updateConfer"
+        android:text="@string/update"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/formatdate"
+        android:layout_alignBaseline="@+id/t3"
+        android:layout_alignBottom="@+id/t3"
+        android:layout_toRightOf="@+id/t3"
+        android:layout_toEndOf="@+id/t3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/formatheur"
+        android:layout_alignBaseline="@+id/t5"
+        android:layout_alignBottom="@+id/t5"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:text="@string/Titre"
+        tools:autoSizeMaxTextSize="20dp"
+        android:layout_alignBaseline="@+id/t1"
+        android:layout_alignBottom="@+id/t1"
+        android:layout_toLeftOf="@+id/t2"
+        android:layout_toStartOf="@+id/t2" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/t2"
+        android:layout_alignBottom="@+id/t2"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/t2"
+        android:layout_toStartOf="@+id/t2"
+        android:text="@string/adresse"
+        android:textAppearance="@style/TextAppearance.AppCompat.Notification.Info" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/apartirde"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/t6"
+        android:layout_alignTop="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Date"
+        android:layout_alignBaseline="@+id/t3"
+        android:layout_alignBottom="@+id/t3"
+        android:layout_alignLeft="@+id/textView7"
+        android:layout_alignStart="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/jusqua"
+        android:layout_alignBaseline="@+id/t5"
+        android:layout_alignBottom="@+id/t5"
+        android:layout_toLeftOf="@+id/t5"
+        android:layout_toStartOf="@+id/t5" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/descrip"
+        android:layout_alignBaseline="@+id/t6"
+        android:layout_alignBottom="@+id/t6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/commencerB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/updateB"
+        android:layout_alignBottom="@+id/updateB"
+        android:layout_alignLeft="@+id/imageView4"
+        android:layout_alignStart="@+id/imageView4"
+        android:onClick="commencerConf"
+        android:text="@string/commencer"
+        android:textStyle="bold" />
+</RelativeLayout>

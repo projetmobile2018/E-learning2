@@ -34,4 +34,6 @@
     <string name="descrip">DESCRIPTION</string>
     <string name="adresse">ADDRESSE</string>
     <string name="Date">DATE</string>
+    <string name="update">MODIFIER</string>
+    <string name="commencer">COMMENCER CONFERENCE</string>
 </resources>

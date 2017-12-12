@@ -3,10 +3,12 @@ package com.example.nesrine.e_learning;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.EditText;
 
 public class ConferenceActivity extends AppCompatActivity {
     String code;
     String titre, descp,adr, date, hD, hF, ps;
+    EditText titr, adresse, dateConf, heurD, heurF,desc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

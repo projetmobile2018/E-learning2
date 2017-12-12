@@ -85,10 +85,10 @@
         android:layout_below="@+id/t4"
         android:layout_alignLeft="@+id/t4"
         android:layout_alignStart="@+id/t4"
-        android:layout_above="@+id/b" />
+        android:layout_above="@+id/updateB" />
 
     <Button
-        android:id="@+id/b"
+        android:id="@+id/updateB"
         style="@style/AppTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

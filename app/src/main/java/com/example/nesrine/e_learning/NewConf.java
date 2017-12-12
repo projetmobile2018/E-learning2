@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,7 +32,7 @@ public class NewConf extends AppCompatActivity {
         heurD = (EditText)findViewById(R.id.t4);
         heurF = (EditText)findViewById(R.id.t5);
         descp = (EditText)findViewById(R.id.t6);
-        b = (Button)findViewById(R.id.b);
+        b = (Button)findViewById(R.id.updateB);
     }
     public void addConfer(View view)
     {
