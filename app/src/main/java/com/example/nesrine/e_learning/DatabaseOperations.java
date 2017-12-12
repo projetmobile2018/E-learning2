@@ -113,4 +113,17 @@ public class DatabaseOperations extends SQLiteOpenHelper {
             return CR;
 
     }
+    public void updateConference(SQLiteDatabase SQ,String code, String titre, String adresse, String dateConf, String heurD, String heurF,String descp, String form)
+    {
+        ContentValues cv = new ContentValues();
+        cv.put(TableData.TableInfo.titre,titre);
+        cv.put(TableData.TableInfo.adresse, adresse);
+        cv.put(TableData.TableInfo.date_conf,dateConf);
+        cv.put(TableData.TableInfo.heure_deb,heurD);
+        cv.put(TableData.TableInfo.heure_fin,heurF);
+        cv.put(TableData.TableInfo.descrip, descp);
+        cv.put(TableData.TableInfo.form_ref, form);
+        long k = SQ.update(TableData.TableInfo.table_conf,cv,TableData.TableInfo.code_conf+" = ? ",new  String[]{code});
+        Log.d("DATABASE OPRETIONS ","One CONFERENCE updated");
+    }
 }

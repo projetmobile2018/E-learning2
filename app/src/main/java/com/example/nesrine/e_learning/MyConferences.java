@@ -54,13 +54,14 @@ DatabaseOperations dop = new DatabaseOperations(this);
 
                     Conference cf = new Conference(code, titre, descp, form, hD, hF, date, adr);
                listC.add(cf);
+                listDataAdapter.add(cf);
 
 
             } while (cr.moveToNext());
-            Toast.makeText(MyConferences.this, "ps "+ps, Toast.LENGTH_LONG).show();
+
             //supprimer les conferneces des autre formateur
-            Toast.makeText(MyConferences.this, "view "+listC.get(i).getForm_ref(), Toast.LENGTH_LONG).show();
-            while(i<listC.size())
+
+           /* while(i<listC.size())
             {
                 String f = listC.get(i).getForm_ref();
                 /*Toast.makeText(MyConferences.this, "view "+f, Toast.LENGTH_LONG).show();
@@ -70,13 +71,13 @@ DatabaseOperations dop = new DatabaseOperations(this);
                 {
                     listC.remove(i);
                 }
-                */
+
 
             }
             //afficher la liste dans ListView
             for(int i=0;i<listC.size();i++) {
                 listDataAdapter.add(listC.get(i));
-            }
+            }*/
 
         }
         //Onclik for
@@ -85,14 +86,14 @@ DatabaseOperations dop = new DatabaseOperations(this);
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(MyConferences.this, "view "+view, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getApplicationContext(),ConferenceActivity.class);
-                intent.putExtra("ps",ps);
-                intent.putExtra("code", code);
-                intent.putExtra("titre",titre);
-                intent.putExtra("adr",adr);
-                intent.putExtra("date", date);
-                intent.putExtra("hD",hD);
-                intent.putExtra("hF",hF);
-                intent.putExtra("descp",descp);
+                intent.putExtra("ps",listC.get(position).getForm_ref());
+                intent.putExtra("code", listC.get(position).getCode_conf());
+                intent.putExtra("titre",listC.get(position).getTitre());
+                intent.putExtra("adr",listC.get(position).getAdresse());
+                intent.putExtra("date", listC.get(position).getDateConf());
+                intent.putExtra("hD",listC.get(position).getHeureD());
+                intent.putExtra("hF",listC.get(position).getHeureF());
+                intent.putExtra("descp",listC.get(position).getDescription());
                 startActivity(intent);
 
             }
