@@ -68,7 +68,7 @@ public class ConferenceAdapter extends ArrayAdapter {
         }
         Conference conference = (Conference)this.getItem(position);
         layoutHandler.titre.setText(conference.getTitre());
-        layoutHandler.date.setText(conference.getCode_conf());
+        layoutHandler.date.setText(conference.getDateConf());
         layoutHandler.hD.setText(conference.getHeureD());
         layoutHandler.hF.setText(conference.getHeureF());
         layoutHandler.form.setText(conference.getForm_ref());

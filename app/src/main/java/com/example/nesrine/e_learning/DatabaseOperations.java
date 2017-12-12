@@ -109,7 +109,7 @@ public class DatabaseOperations extends SQLiteOpenHelper {
     public Cursor getConfer(SQLiteDatabase SQ)
     {
             String[] conferneces ={TableData.TableInfo.code_conf, TableData.TableInfo.titre, TableData.TableInfo.adresse, TableData.TableInfo.date_conf, TableData.TableInfo.heure_deb, TableData.TableInfo.heure_fin, TableData.TableInfo.descrip, TableData.TableInfo.form_ref};
-            Cursor CR = SQ.query(TableData.TableInfo.table_conf,conferneces,null,null,null,null,null,null);
+            Cursor CR = SQ.query(TableData.TableInfo.table_conf,conferneces,null,null,null,null,null);
             return CR;
 
     }

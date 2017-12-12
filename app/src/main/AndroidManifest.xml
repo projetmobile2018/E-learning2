@@ -28,7 +28,8 @@
         <activity android:name=".FormateurMenu" />
         <activity android:name=".NewConf" />
         <activity android:name=".MyConferences" />
-        <activity android:name=".OtherConferences"></activity>
+        <activity android:name=".OtherConferences" />
+        <activity android:name=".ConferenceActivity"></activity>
     </application>
 
 </manifest>
