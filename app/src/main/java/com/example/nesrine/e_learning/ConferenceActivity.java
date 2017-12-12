@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -51,7 +52,7 @@ public class ConferenceActivity extends AppCompatActivity {
         heurF.setText(hF);
         desc.setText(descp);
     }
-    public void  updateConfer()
+    public void  updateConfer(View view)
     {
         titre= titr.getText().toString();
         ad = adresse.getText().toString();
@@ -113,7 +114,7 @@ public class ConferenceActivity extends AppCompatActivity {
                                     DatabaseOperations databaseOperations = new DatabaseOperations(this);
                                     SQ = databaseOperations.getWritableDatabase();
                                     databaseOperations.updateConference(SQ,code, titre, ad, dConf, hD, hF, desp, ps);
-                                    Toast toast = Toast.makeText(getApplicationContext(), "l'ajout d'une Conférence faite avec succès", duration);
+                                    Toast toast = Toast.makeText(getApplicationContext(), "Conférence éte modifier ", duration);
                                     toast.show();
 
                                     Intent intent = new Intent(this, MyConferences.class);
@@ -131,8 +132,9 @@ public class ConferenceActivity extends AppCompatActivity {
             }
         }
     }
-     public void commencerConf()
+     public void commencerConf(View view)
      {
-
+         Toast toast = Toast.makeText(getApplicationContext(), "conférence direct ^-^ ", duration);
+         toast.show();
      }
 }

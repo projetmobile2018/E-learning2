@@ -1,5 +1,6 @@
 package com.example.nesrine.e_learning;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -27,6 +28,7 @@ DatabaseOperations dop = new DatabaseOperations(this);
     SQLiteDatabase sqLiteDatabase;
     ConferenceAdapter listDataAdapter;
     ArrayList<Conference> listC = new ArrayList<>();
+    Context ctx=this;
     int i =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,17 +86,22 @@ DatabaseOperations dop = new DatabaseOperations(this);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MyConferences.this, "view "+view, Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(getApplicationContext(),ConferenceActivity.class);
-                intent.putExtra("ps",listC.get(position).getForm_ref());
-                intent.putExtra("code", listC.get(position).getCode_conf());
-                intent.putExtra("titre",listC.get(position).getTitre());
-                intent.putExtra("adr",listC.get(position).getAdresse());
-                intent.putExtra("date", listC.get(position).getDateConf());
-                intent.putExtra("hD",listC.get(position).getHeureD());
-                intent.putExtra("hF",listC.get(position).getHeureF());
-                intent.putExtra("descp",listC.get(position).getDescription());
-                startActivity(intent);
+                try {
+
+                    Intent intent = new Intent(MyConferences.this, ConferenceActivity.class);
+                    intent.putExtra("ps", ps);
+                    intent.putExtra("code", listC.get(position).getCode_conf());
+                    intent.putExtra("titre", listC.get(position).getTitre());
+                    intent.putExtra("adr", listC.get(position).getAdresse());
+                    intent.putExtra("date", listC.get(position).getDateConf());
+                    intent.putExtra("hD", listC.get(position).getHeureD());
+                    intent.putExtra("hF", listC.get(position).getHeureF());
+                    intent.putExtra("descp", listC.get(position).getDescription());
+                    startActivity(intent);
+                }catch(Exception e)
+                {
+                    Log.d("my conference","go to conférence");
+                }
 
             }
         });

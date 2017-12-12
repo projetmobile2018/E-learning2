@@ -101,14 +101,14 @@
         style="@style/AppTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView10"
-        android:layout_alignStart="@+id/textView10"
-        android:layout_below="@+id/t6"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="33dp"
         android:elevation="0dp"
         android:onClick="updateConfer"
         android:text="@string/update"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_below="@+id/t6"
+        android:layout_alignLeft="@+id/textView10"
+        android:layout_alignStart="@+id/textView10" />
 
     <TextView
         android:id="@+id/textView3"
