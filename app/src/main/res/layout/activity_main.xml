@@ -38,14 +38,15 @@
         android:onClick="gotosign"
         android:text="@string/sign_up"
         android:textColor="@android:color/black" />
+
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/brain"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_below="@+id/loginB"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp" />
+        android:layout_marginTop="14dp"
+        app:srcCompat="@drawable/learning" />
 
     <EditText
         android:id="@+id/edit1"
