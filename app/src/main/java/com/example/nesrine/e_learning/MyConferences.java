@@ -34,6 +34,7 @@ DatabaseOperations dop = new DatabaseOperations(this);
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_conferences);
+
         Intent intent = getIntent();
         ps = intent.getStringExtra("ps");
         list= (ListView)findViewById(R.id.list);
@@ -41,7 +42,6 @@ DatabaseOperations dop = new DatabaseOperations(this);
         list.setAdapter(listDataAdapter);
         dop = new DatabaseOperations(this);
         sqLiteDatabase = dop.getReadableDatabase();
-        ps = mainActivity.getPs();
         cr = dop.getConfer(sqLiteDatabase);
         if(cr.moveToFirst()) {
             do {
