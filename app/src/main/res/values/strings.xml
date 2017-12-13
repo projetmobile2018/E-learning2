@@ -36,4 +36,7 @@
     <string name="Date">DATE</string>
     <string name="update">MODIFIER</string>
     <string name="commencer">COMMENCER CONFERENCE</string>
+    <string name="picture">IMAGE</string>
+    <string name="description_info">DESCRIPTION INFORMATION</string>
+    <string name="take_picture">Take picture</string>
 </resources>

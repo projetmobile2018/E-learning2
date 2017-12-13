@@ -51,10 +51,17 @@ public class ConferenceActivity extends AppCompatActivity {
         heurD.setText(hD);
         heurF.setText(hF);
         desc.setText(descp);
+
     }
     public void  updateConfer(View view)
     {
-
+//take the new or old values of EditText
+        form= ps;
+        titre= titr.getText().toString();
+        ad = adresse.getText().toString();
+        dConf = dateConf.getText().toString();
+        hD = heurD.getText().toString();
+        hF = heurF.getText().toString();
         desp = desc.getText().toString();
         SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yy");
         SimpleDateFormat simple = new SimpleDateFormat("hh:mm");
@@ -132,5 +139,7 @@ public class ConferenceActivity extends AppCompatActivity {
      {
          Toast toast = Toast.makeText(getApplicationContext(), "conférence direct ^-^ ", duration);
          toast.show();
+         Intent intent = new Intent(this, CommencerConf.class);
+         startActivity(intent);
      }
 }
