@@ -54,11 +54,7 @@ public class ConferenceActivity extends AppCompatActivity {
     }
     public void  updateConfer(View view)
     {
-        titre= titr.getText().toString();
-        ad = adresse.getText().toString();
-        dConf = dateConf.getText().toString();
-        hD = heurD.getText().toString();
-        hF = heurF.getText().toString();
+
         desp = desc.getText().toString();
         SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yy");
         SimpleDateFormat simple = new SimpleDateFormat("hh:mm");
